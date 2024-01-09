@@ -6,29 +6,24 @@ Usage
 Installation
 ------------
 
-To use Lumache, first install it using pip:
+To use GeoViz, first install it using pip:
 
 .. code-block:: console
 
-   (.venv) $ pip install lumache
+   (.venv) $ pip install rincon-geoviz
 
-Creating recipes
+Analyze a dataset for the first time
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+Make myoptions.json file
 
-.. autofunction:: lumache.get_random_ingredients
+run command
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+Re-running an analysis
+----------------
 
-.. autoexception:: lumache.InvalidKindError
+Simply run the ``geoviz`` command again:
 
-For example:
+.. code-block:: console
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
+   (.venv) $ geoviz “data.csv” --options=”myoptions.json”
