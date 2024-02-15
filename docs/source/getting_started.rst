@@ -58,3 +58,9 @@ Then we call it from the command line like so:
 
 Make sure that the paths to the data and options are relative to the directory you're calling rrcgeoviz from.
 
+.. note::
+
+   Some warnings may appear in the console. Ignore these: we're in the process of fixing them.
+
+A tab should open in your default browser with GeoViz running! Once you're done, stop the GeoViz server with `Ctrl+C`
+in the terminal.
