@@ -5,7 +5,7 @@ Getting your data
 ------------------
 
 First things first, make sure your data is in a **.csv** format! 
-We may handle other file formats in the future, but for now stick with .csv files.
+We may handle other file formats in the future, but for now stick with .csv files. The csv data should be row-based, meaning each data point is one row (not column).
 
 For most tools GeoViz provides, you'll need (at least) columns representing:
 - Latitude (floats between -90 and 90)
