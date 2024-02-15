@@ -1,19 +1,26 @@
 Rincon GeoViz Documentation
 ===================================
 
-**GeoViz** is an Exploratory Data Analysis (EDA) tool designed to empower 
-data analysts in visualizing and interpreting spatio-temporal data. 
-It offers a user-friendly, interactive web interface built on Panel, ensuring
-simplicity and maximal explainability. The software provides visualizations,
-including 3D geographical coordinates, seasonality analysis, heatmap displays, 
-and categorization/clustering using Natural Language Processing (NLP). 
-With a focus on simplicity and shareability, GeoViz enhances data analysis 
-for a broader audience. For a full list of features see the :doc:`features` page.
+**GeoViz** is an Exploratory Data Analysis (EDA) tool specifically
+designed for spatio-temporal data with abilities to deal with natural language. For a full list of features see the :doc:`features` page.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project. If you've done that, then check
-out the :doc:`example` page to see GeoViz in action. To see all the user options, see the
-:doc:`options` page. 
+=================
+Who is this for?
+=================
+
+GeoViz might be the tool for you if you:
+- Work with spatio-temporal data, i.e. data with a longitude, latitude, and time columns
+- Like looking at histograms 
+- Are trying to find inital patterns in your data for further analysis
+- Want quick analyses to start with, e.g. simple clustering
+- Have natural language columns correlating with the rest of the data
+
+=================
+How to Start
+=================
+
+Check out the :doc:`getting_started` page for how to install and run rrcgeoviz. Once you've gone through that, take a look at
+the :doc:`features` page to see all the GeoViz has to offer.
 
 Having issues? Head to the :doc:`troubleshooting` page.
 
@@ -26,9 +33,7 @@ Contents
 
 .. toctree::
 
-   usage
-   example
+   getting_started
    features
-   options
    troubleshooting
    

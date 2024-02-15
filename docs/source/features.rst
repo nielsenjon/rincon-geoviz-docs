@@ -1,4 +1,7 @@
 Features
 =====
 
-Put features here
+Heatmap
+--------
+
+# TODO: Add screenshot, required columns

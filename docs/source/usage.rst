@@ -1,9 +1,9 @@
 Usage
 =====
 
-.. _installation:
+.. _install:
 
-Installation
+How to Install
 ------------
 
 To use GeoViz, first install it using pip:
