@@ -9,11 +9,12 @@ Who is this for?
 =================
 
 GeoViz might be the tool for you if you:
-- Work with spatio-temporal data, i.e. data with a longitude, latitude, and time columns
-- Like looking at histograms 
-- Are trying to find inital patterns in your data for further analysis
-- Want quick analyses to start with, e.g. simple clustering
-- Have natural language columns correlating with the rest of the data
+
+* Work with spatio-temporal data, i.e. data with a longitude, latitude, and time columns
+* Like looking at histograms 
+* Are trying to find inital patterns in your data for further analysis
+* Want quick analyses to start with, e.g. simple clustering
+* Have natural language columns correlating with the rest of the data
 
 =================
 How to Start
