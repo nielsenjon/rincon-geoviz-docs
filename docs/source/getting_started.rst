@@ -39,7 +39,7 @@ Let's say that we want to see the **month-to-month frequency** and the **one yea
 
 Now we need to add `all_months` and `one_year` to our options file. Let's do that:
 
-.. code-block:: json
+.. code-block:: javascript
 
     {
     "columns": {
@@ -58,7 +58,7 @@ Note that we put `all_months` and `one_year` in the "features" block, separate f
 If we look at the One Year Map feature, we see that there's some additional options. If we have a column called "victim" whose value
 we want to see when we hover over its datapoint, we can add it like so:
 
-.. code-block:: json
+.. code-block:: javascript
 
     {
     "columns": {
@@ -79,7 +79,7 @@ we want to see when we hover over its datapoint, we can add it like so:
 
 If we wanted to add a filter column, we could also add it to the "features_customizations" block with
 
-.. code-block:: json
+.. code-block:: javascript
 
     "features_customizations": {
         "hover_text_columns": [
@@ -100,7 +100,7 @@ Installing & Running GeoViz
 
 That's it for setup, now let's actually see what GeoViz can do. Install it with pip:
 
-.. code-block:: bash
+..code-block:: bash
 
     pip install rrcgeoviz --upgrade
 

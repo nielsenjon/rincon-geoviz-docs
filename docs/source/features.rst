@@ -41,7 +41,7 @@ Same as Year Range Map, but for one year at a time.
 
 - "hover_text_columns": Columns whose data you want to show on hovering over a point on the map. Add to `features_customizations` with:
 
-.. code-block::json
+.. code-block:: javascript
 
     "hover_text_columns": [
             "ColumnName1",
@@ -51,7 +51,7 @@ Same as Year Range Map, but for one year at a time.
 
 - "filter_one_year_column": Adds an extra dropdown that lets you only display points which match the selected value of the given column. Added with:
 
-.. code-block::json
+.. code-block:: javascript
 
      "filter_one_year_column": "ColumnName"
 
