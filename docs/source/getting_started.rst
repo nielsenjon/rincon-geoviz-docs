@@ -22,25 +22,78 @@ Start by making a `myoptions.json` file that looks like the following:
 .. code-block:: json
 
     {
-    "latitude_column": "latitude",
-    "longitude_column": "longitude",
-    "time_column": "date",
+    "columns": {
+        "latitude_column": "latitude",
+        "longitude_column": "longitude",
+        "time_column": "date"
+    }
     }
 
-Where "latitude" is the name of the column of latitude values, "longitude" is the longitude column, and "date" is the dates column.
+Where "latitude" is the name of the column of latitude values, "longitude" is the longitude column, and "date" is the column of timestamps.
 
 Now, let's decide which components we want to see! GeoViz has a lot of :doc:`features`, so take some time to look through them.
-Let's say that we want to see the temporal heatmap. We can see that to enable that, we need to make sure the latitude & longitude columns are set (done!) 
-and that we need is to add `yearly_range` to our options file. Let's do that:
+Let's say that we want to see the **month-to-month frequency** and the **one year map** features. According to the features page, we need to make sure that we have:
+
+- the **time** column for the **month-to-month frequency feature** (done!)
+- the **latitude, longitude, and time** columns for the **one year map feature** (also done!)
+
+Now we need to add `all_months` and `one_year` to our options file. Let's do that:
 
 .. code-block:: json
 
     {
-    "latitude_column": "latitude",
-    "longitude_column": "longitude",
-    "time_column": "date",
-    "yearly_range": true
+    "columns": {
+        "latitude_column": "latitude",
+        "longitude_column": "longitude",
+        "time_column": "date"
+    },
+    "features": [
+        "all_months",
+        "one_year"
+    ]
     }
+
+Note that we put `all_months` and `one_year` in the "features" block, separate from the "columns" block. 
+
+If we look at the One Year Map feature, we see that there's some additional options. If we have a column called "victim" whose value
+we want to see when we hover over its datapoint, we can add it like so:
+
+.. code-block:: json
+
+    {
+    "columns": {
+        "latitude_column": "latitude",
+        "longitude_column": "longitude",
+        "time_column": "date"
+    },
+    "features": [
+        "all_months",
+        "one_year"
+    ],
+    "features_customizations": {
+        "hover_text_columns": [
+            "victim"
+        ],
+    },
+    }
+
+If we wanted to add a filter column, we could also add it to the "features_customizations" block with
+
+.. code-block:: json
+
+    "features_customizations": {
+        "hover_text_columns": [
+            "victim"
+        ],
+        "filter_one_year_column": "victim"
+    },
+    
+.. note::
+
+   Eventually, another json block can be customized: the caching block. Here you can set whether to use 
+   cached data for long-running data generation, e.g. Berttopic or POI analysis. It's not implemented yet, but it's on our todo list!
+
+To see what a complete options file looks like, check out the one at `rrcgeoviz/options_tests/devoptions.json <https://github.com/rrc-byu/ds-capstone-2023-2024/blob/major_refactor/tests/options_files/devoptions.json>`_.
 
 Installing & Running GeoViz
 ----------------------------
@@ -55,13 +108,9 @@ Then we call it from the command line like so:
 
 .. code-block:: bash
     
-    rrcgeoviz relative/path/to/mydata.csv --options relative/path/to/myoptions.json
+    rrcgeoviz relative/path/to/mydata.csv relative/path/to/myoptions.json
 
 Make sure that the paths to the data and options are relative to the directory you're calling rrcgeoviz from.
-
-.. note::
-
-   Some warnings may appear in the console. Ignore these: we're in the process of fixing them.
 
 A tab should open in your default browser with GeoViz running! Once you're done, stop the GeoViz server with `Ctrl+C`
 in the terminal.

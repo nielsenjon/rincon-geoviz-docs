@@ -27,7 +27,19 @@ How to Start
 =================
 
 Check out the :doc:`getting_started` page for how to install and run rrcgeoviz. Once you've gone through that, take a look at
-the :doc:`features` page to see all the GeoViz has to offer.
+the :doc:`features` page to see all the GeoViz has to offer. 
+
+To run GeoViz, you need a csv file and a json options file (with an example in the getting started page). To start, install it with
+
+.. code-block:: bash
+
+    pip install rrcgeoviz --upgrade
+
+and run it with
+
+.. code-block:: bash
+    
+    rrcgeoviz path/to/mydata.csv path/to/myoptions.json
 
 Having issues? Head to the :doc:`troubleshooting` page.
 
