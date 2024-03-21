@@ -13,7 +13,7 @@ Shows a heatmap of the frequency of incidents by year (row) and month (column).
 
 **Added with:** `"month_year_heatmap"`
 
-.. image:: year_month_heatmap.png
+.. image:: images/heatmap.png
     :scale: 75 %
     :align: center
 
@@ -25,7 +25,7 @@ Shows the incidents on a world map, with the years shown selected by a range.
 
 **Added with:** `"yearly_range"`
 
-.. image:: year_range_map.png
+.. image:: images/yearly_range.png
     :scale: 75 %
     :align: center
 
@@ -55,7 +55,7 @@ Same as Year Range Map, but for one year at a time.
 
      "filter_one_year_column": "ColumnName"
 
-.. image:: one_year_map.png
+.. image:: images/one_year_range.png
     :scale: 75 %
     :align: center
 
@@ -67,7 +67,7 @@ Histogram showing the frequency per month across all data points.
 
 **Added with:** `"all_months"`
 
-.. image:: month_freq.png
+.. image:: images/all_months.png
     :scale: 75 %
     :align: center
 
@@ -79,7 +79,7 @@ Month-to-Month Frequency, but for one year at a time.
 
 **Added with:** `"one_year_months"`
 
-.. image:: month_freq_one_year.png
+.. image:: images/all_months_year.png
     :scale: 75 %
     :align: center
 
@@ -91,7 +91,42 @@ A 3D visualization of the data. Latitude, longitude, and time are each a dimensi
 
 **Added with:** `"threeD"`
 
-.. image:: threed_viz.png
+.. image:: images/threeD.png
     :scale: 75 %
     :align: center
 
+Points of Interest (POI)
+-------------------------------------------
+A list of the most popular locations using another dataset to generate the popular locations
+
+**Requires:** latitude_column, longitude_column
+
+**Added with:** `"poi_analysis"`
+
+.. image:: images/poi.png
+    :scale: 75 %
+    :align: center
+
+Search Key Words
+-------------------------------------------
+A histogram showing the count of a key term in a specified column
+
+**Requires:** NONE
+
+**Added with:** `"search_columns"`
+
+.. image:: images/search.png
+    :scale: 75 %
+    :align: center
+
+Bertopic Visualizations
+-------------------------------------------
+A intertopic map created from BerTopic model. 
+
+**Requires:** description_column
+
+**Added with:** `"nlp_bertopics"`
+
+.. image:: images/bert.png
+    :scale: 75 %
+    :align: center
