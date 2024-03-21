@@ -95,3 +95,38 @@ A 3D visualization of the data. Latitude, longitude, and time are each a dimensi
     :scale: 75 %
     :align: center
 
+Points of Interest (POI)
+-------------------------------------------
+A list of the most popular locations using another dataset to generate the popular locations
+
+**Requires:** latitude_column, longitude_column
+
+**Added with:** `"poi_analysis"`
+
+.. image:: images/poi.png
+    :scale: 75 %
+    :align: center
+
+Search Key Words
+-------------------------------------------
+A histogram showing the count of a key term in a specified column
+
+**Requires:** NONE
+
+**Added with:** `"search_columns"`
+
+.. image:: images/search.png
+    :scale: 75 %
+    :align: center
+
+Bertopic Visualizations
+-------------------------------------------
+A intertopic map created from BerTopic model. 
+
+**Requires:** description_column
+
+**Added with:** `"nlp_bertopics"`
+
+.. image:: images/bert.png
+    :scale: 75 %
+    :align: center
